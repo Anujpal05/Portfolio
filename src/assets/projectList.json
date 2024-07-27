@@ -1,0 +1,58 @@
+{
+  "project1": {
+    "name": "Blog Pulse",
+    "description": "BlogPulse is a dynamic platform where users can immerse themselves in the world of blogging. Users can seamlessly create, read, update, and delete their own blogs while exploring content from other bloggers. The application ensures a secure and smooth experience with JWT token-based authentication and a responsive design.",
+    "features": [
+      "Secure sign-in and sign-out using JWT tokens.",
+      "Create, update, and delete personal blog posts.",
+      "Browse and read blog posts from other users.",
+      "Optimized for various devices to enhance user experience."
+    ],
+    "technology": [
+      "React with Redux Toolkit for state management.",
+      "JWT tokens for secure user authentication.",
+      "Responsive layout for a seamless experience across devices."
+    ],
+    "GitHubLink": "https://github.com/Anujpal05/Blogs.git",
+    "LiveLink": "https://blog-pulse.netlify.app"
+  },
+  "project2": {
+    "name": "Book Heaven",
+    "description": "Book Heaven is an interactive platform where users can explore book details and prices, and place orders after logging in. Users can favorite and cart books, view updated order statuses and book details, and enjoy mailing facilities such as OTP verification and order status updates. The admin panel allows admins to manage books and user orders efficiently.",
+    "features": [
+      "View book details and prices.",
+      "Order books after logging in.",
+      "Favorite and cart books.",
+      "View updated order statuses and book details.",
+      "Mailing facilities including OTP verification and order status updates.",
+      "Admin panel for managing books and user orders."
+    ],
+    "technology": [
+      "React with Redux Toolkit for state management.",
+      "JWT tokens for secure user authentication.",
+      "Responsive design for a seamless experience across devices."
+    ],
+    "GitHubLink": "https://github.com/Anujpal05/BookHeaven.git",
+    "LiveLink": "https://bookheaven-store.netlify.app"
+  },
+
+  "project3": {
+    "name": "NewsDaily",
+    "description": "NewsDaily is a responsive web application where users can read daily news across various categories such as sports, business, health, and technology. Users can select their preferred news categories and enjoy a seamless reading experience with top-loading effects, infinite scrolling, and loaders. The application uses the News API key for local use only.",
+    "features": [
+      "Read daily updated news.",
+      "Browse news by categories: sports, business, health, technology.",
+      "Responsive design for a seamless reading experience across devices.",
+      "Top-loading effect for smooth content loading.",
+      "Infinite scrolling for continuous news updates.",
+      "Loader for indicating content loading."
+    ],
+    "technology": [
+      "News API for fetching daily news (local use only).",
+      "React for building user interfaces.",
+      "Responsive design for various devices."
+    ],
+    "GitHubLink": "https://github.com/Anujpal05/DailyNews.git",
+    "LiveLink": "https://github.com/Anujpal05/DailyNews.git"
+  }
+}
