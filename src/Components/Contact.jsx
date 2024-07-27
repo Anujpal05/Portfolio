@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { IoIosMail } from "react-icons/io";
 import { LuPhoneCall } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import toast from 'react-hot-toast';
-// import sendMail from '../script';
 
 function Contact() {
 
@@ -11,7 +10,7 @@ function Contact() {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "942d90eb-1b6c-4e51-aa7a-ebe9375fc90d");
+        formData.append("access_key", import.meta.env.VITE_ACCESSKEY);
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
