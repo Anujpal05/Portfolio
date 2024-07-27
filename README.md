@@ -30,15 +30,15 @@ To run this project locally, follow these steps:
 
 2. **Install dependencies:**
 
-````bash
+```bash
 npm install
+```
 
-3.**Start the development server:**
+3. **Start the development server:**
 ```bash
 npm start
+```
 
 The application should now be running on http://localhost:3000.
 
 Thank You for visiting my portfolio web application.
-
-````
