@@ -34,13 +34,7 @@ To run this project locally, follow these steps:
 npm install
 ```
 
-3. **Set env file:**
-
-```env
-VITE_ACCESSKEY = Your_web3forms_accesskey
-```
-
-4. **Start the development server:**
+3.**Start the development server:**
 
 ```bash
 npm start
