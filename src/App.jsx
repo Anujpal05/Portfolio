@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
 import ProjectDetails from './Components/ProjectDetails';
 import Home from './Components/Home';
@@ -15,14 +15,14 @@ function App() {
       {/* Using Toastify for notifications */}
       <Toaster />
       {/* Defines route for perticular endpoint and then render their Components */}
-      <Router>
+      <HashRouter>
         <Routes>
           <Route path='/project1' element={<ProjectDetails details={projectList.project1} img={project1} />} />
           <Route path='/project2' element={<ProjectDetails details={projectList.project2} img={project2} />} />
           <Route path='/project3' element={<ProjectDetails details={projectList.project3} img={project3} />} />
           <Route path='/' element={<Home />} />
         </Routes>
-      </Router>
+      </HashRouter>
 
     </div>
   )
