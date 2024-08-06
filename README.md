@@ -23,8 +23,8 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
+   git clone https://github.com/Anujpal05/Portfolio.git
+   cd Portfolio
 
    ```
 
@@ -34,12 +34,18 @@ To run this project locally, follow these steps:
 npm install
 ```
 
-3.**Start the development server:**
+3. **Set env file:**
+
+```env
+VITE_ACCESSKEY = Your_web3forms_accesskey
+```
+
+4. **Start the development server:**
 
 ```bash
 npm start
 ```
 
-The application should now be running on http://localhost:3000.
+The application should now be running on http://localhost:5173.
 
 Thank You for visiting my portfolio web application.
