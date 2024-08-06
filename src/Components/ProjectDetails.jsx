@@ -5,10 +5,11 @@ import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 import { GrTechnology } from "react-icons/gr";
 
-
-
+//In This Page My Projects details are show with their source code and live demo link
 function ProjectDetails(props) {
+
     const Project = props.details;
+
     return (
         <div className=' min-w-[100vw] h-fit w-fit '>
             <div className=' p-3 bg-gray-950 mb-5 flex justify-between md:px-20 '>
@@ -19,11 +20,11 @@ function ProjectDetails(props) {
                 </div>
             </div>
             <div>
-                <div className=' flex justify-center'><h1 className=' text-3xl  text-center bg-gradient-to-r from-purple-700 to-red-500 bg-clip-text text-transparent font-bold w-fit p-2'>Project Details</h1></div>
-                <div className=' grid grid-cols-1 md:grid-cols-2 items-center justify-center p-5 md:p-14'>
-                    <a href={Project.LiveLink} target='_blank'><div className='w-[95%] md:w-[80%] flex justify-center items-center p-3 bg-gradient-to-r from-purple-700 to-red-500 rounded-md transition-all duration-300 hover:scale-105'><img src={props.img} alt="" className='w-[98%]  ' /></div></a>
+                <div className=' flex justify-center'><h1 className='text-4xl md:text-5xl  text-center bg-gradient-to-r from-purple-700 to-red-500 bg-clip-text text-transparent font-bold w-fit p-2'>Project Details</h1></div>
+                <div className=' grid grid-cols-1 lg:grid-cols-2 items-center justify-center p-5 md:px-14'>
+                    <a href={Project.LiveLink} target='_blank'><div className='w-[95%] lg:w-[80%] flex justify-center items-center p-2 md:p-3 bg-gradient-to-r from-purple-700 to-red-500 rounded-md transition-all duration-300 hover:scale-105'><img src={props.img} alt="project Image" loading='lazy' className='w-[98%] md:h-auto h-36  ' /></div></a>
                     <div className=' text-xl text-gray-300 font-semibold space-y-4 py-10'>
-                        <div className=' flex space-x-3   '>
+                        <div className=' flex space-x-3'>
                             <h1 className='bg-gradient-to-r text-gray-400 font-bold'>Name:</h1>
                             <h3 className=' text-gray-500'>{Project.name}</h3>
                         </div>
@@ -33,11 +34,12 @@ function ProjectDetails(props) {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 items-center justify-center p-5 md:pb-14 md:p-14'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 items-center justify-center p-5 md:pb-14 md:px-14'>
                     <div>
                         <h1 className='text-3xl  bg-gradient-to-r text-gray-400 font-semibold w-fit'>Features</h1>
                         <div className=' py-5'>
                             {
+                                // Mapping projects all features
                                 Project.features.map((items, i) => (
                                     <li className=' text-gray-500 font-semibold' key={i}>{items}</li>
                                 ))
@@ -48,6 +50,7 @@ function ProjectDetails(props) {
                         <h1 className='text-3xl bg-gradient-to-r text-gray-400 font-semibold w-fit flex items-center p-1 gap-2'><span>Technology</span><span className=' text-gray-500'><GrTechnology /></span></h1>
                         <div className=' py-5'>
                             {
+                                //Mapping projects all technology
                                 Project.technology.map((items, i) => (
                                     <li className=' text-gray-500 font-semibold' key={i}>{items}</li>
                                 ))
