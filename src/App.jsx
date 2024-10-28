@@ -4,9 +4,9 @@ import { Toaster } from 'react-hot-toast';
 import ProjectDetails from './Components/ProjectDetails';
 import Home from './Components/Home';
 import projectList from "./assets/projectList.json";
-import project1 from "./assets/project1.png"
-import project2 from "./assets/project2.png"
-import project3 from "./assets/project3.png"
+import project1 from "./assets/project1.webp"
+import project2 from "./assets/project2.webp"
+import project3 from "./assets/project3.webp"
 
 function App() {
 

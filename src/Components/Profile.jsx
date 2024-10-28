@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/anujImg.jpg'
+import img from '../assets/anujImg.webp'
 
 //Profile Component
 function Profile(props) {
