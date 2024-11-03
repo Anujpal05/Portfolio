@@ -5,7 +5,7 @@ import { RxCross1 } from "react-icons/rx";
 
 function Navbar(props) {
     //setting visibility of navbar in small or large devices
-    const [visible, setvisible] = useState("hidden");
+    const [isOpen, setisOpen] = useState(false);
 
     //This function scrolling smoothly from current components to reffered component
     const scrollToSection = (ref) => {
@@ -25,13 +25,13 @@ function Navbar(props) {
                     <button className=' outline-none hover:scale-105 transition-all duration-300' onClick={() => scrollToSection(props.myprojectRef)}>Project</button>
                     <button className=' outline-none hover:scale-105' onClick={() => scrollToSection(props.contactRef)}>Contact me</button>
                 </div>
-                <a href="https://drive.google.com/file/d/15Z0h1Z2eIKro9zkJ2ELSG7L-a6T6FEfP/view?usp=sharing" target='_blank'><button className='hidden lg:flex bg-gradient-to-r from-purple-700 to-red-400 p-2 px-5 rounded-full font-semibold outline-none hover:from-purple-900 hover:to-red-600 hover:scale-105 transition-all duration-300 '>My Resume</button></a>
-                <button className='flex lg:hidden text-4xl outline-none ' onClick={() => setvisible("fixed")}><IoReorderThree /></button>
+                <a className=' outline-none' href="https://drive.google.com/file/d/15Z0h1Z2eIKro9zkJ2ELSG7L-a6T6FEfP/view?usp=sharing" target='_blank'><button className='hidden lg:flex bg-gradient-to-r from-purple-700 to-red-400 p-2 px-5 rounded-full font-semibold outline-none hover:from-purple-900 hover:to-red-600 hover:scale-105 transition-all duration-300'>My Resume</button></a>
+                <button className='flex lg:hidden text-4xl outline-none ' onClick={() => setisOpen(true)}><IoReorderThree /></button>
 
                 {/* For responsiveness creating another navbar container for small device like mobile or tablets. */}
-                <div className={`${visible} left-0 top-0 h-screen w-screen`}>
-                    <div className={`${visible} right-0 top-0 h-screen w-3/6 bg-zinc-900 text-gray-300 animate-r-slide-nav  transition-all duration-500`}>
-                        <div className=' w-full flex justify-end'><button className=' p-4 text-2xl outline-none' onClick={() => setvisible("hidden")}><RxCross1 /></button></div>
+                <div className={` w-[45%] md:w-[30%] fixed top-0 right-0 transform transition-transform duration-500 ease-in-out ${!isOpen ? 'translate-x-full' : "translate-x-0"}`}>
+                    <div className={` h-screen bg-zinc-900 text-gray-300`}>
+                        <div className=' w-full flex justify-end'><button className=' p-4 text-2xl outline-none' onClick={() => setisOpen(false)}><RxCross1 /></button></div>
                         <div className=' flex flex-col space-y-5  '>
                             <button className=' outline-none hover:scale-105 transition-all duration-300' onClick={() => scrollToSection(props.homeRef)} >Home</button>
                             <button className=' outline-none hover:scale-105 transition-all duration-300' onClick={() => scrollToSection(props.aboutRef)}>About me</button>
