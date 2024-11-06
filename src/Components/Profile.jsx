@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import img from '../assets/anujImg.webp'
 import img1 from '../assets/anujImg.jpg'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 //Profile Component
@@ -59,7 +62,7 @@ function Profile(props) {
                 eraseTimeout = setTimeout(eraseMessage, typingSpeed);
             } else {
                 messageIndex = (messageIndex + 1) % messages.length;
-                typeTimeout = setTimeout(typeMessage, 2000);
+                typeTimeout = setTimeout(typeMessage, 1000);
             }
         }
         typeMessage();
@@ -73,15 +76,27 @@ function Profile(props) {
     }, [])
 
 
+    useEffect(() => {
+        gsap.from(".animate-profile", {
+            scale: 0,
+            opacity: 0.2
+        })
+        gsap.to(".animate-profile", {
+            scale: 1,
+            opacity: 1,
+            duration: 2
+        })
+    }, [])
+
 
 
     return (
         <div className=' py-20 pt-36 text-zinc-300'>
             <div className='h-fit min-w-screen rounded-full flex justify-center items-center'>
-                {/* <picture>
+                <picture className=' animate-profile'>
                     <source srcSet={img} type='image/webp' />
-                </picture> */}
-                <img src={img1} alt="Image" loading='lazy' className=' h-52 w-52 border-2 border-white rounded-full' />
+                    <img src={img1} alt="Image" loading='lazy' className=' h-52 w-52 border-2 border-white rounded-full' />
+                </picture>
             </div>
             <div className=' flex  flex-col justify-center items-center'>
                 <h1 ref={textNameRef} className=' text-4xl md:text-5xl min-h-14 font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500  to-red-500 p-3' id=' text-name'></h1>

@@ -1,11 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoIosMail } from "react-icons/io";
 import { LuPhoneCall } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import toast from 'react-hot-toast';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 //Contact Component
 function Contact() {
+
+    useEffect(() => {
+        gsap.from(".animate-contact", {
+            scale: 0.2,
+            opacity: 0
+        });
+        gsap.to(".animate-contact", {
+            scale: 1,
+            opacity: 1,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".animate-contact",
+                scroller: "body",
+                start: "top bottom",   // Starting point for large screens
+                end: "top 70%",
+                scrub: 3
+            }
+        });
+    }, [])
+
 
     //Submit form and get email using web3forms server
     const onSubmit = async (event) => {
@@ -35,8 +58,8 @@ function Contact() {
     };
 
     return (
-        <div>
-            <h1 className=' text-5xl font-semibold text-center text-gray-300 pt-20'>Contact</h1>
+        <div className=' animate-contact'>
+            <h1 className=' text-5xl font-semibold text-center text-gray-300 pt-5 lg:pt-20'>Contact</h1>
             <div className=' grid grid-cols-1 md:grid-cols-2 md:px-9 lg:px-16 px-8  py-10 text-gray-300'>
                 <div className=' md:px-16 lg:px-24 space-y-7'>
                     <h1 className=' w-fit bg-clip-text text-transparent font-bold bg-gradient-to-r from-purple-600 to-red-400 text-4xl '>Let's talk</h1>
