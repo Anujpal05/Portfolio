@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import { FaGithub } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { FaLink } from "react-icons/fa";
 import { GrTechnology } from "react-icons/gr";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { image } from 'framer-motion/client';
 gsap.registerPlugin(ScrollTrigger);
 
 //In This Page My Projects details are show with their source code and live demo link
@@ -13,26 +14,39 @@ function ProjectDetails(props) {
     const Project = props.details;
 
     useEffect(() => {
+        const imgProject = document.getElementById("imgProject");
+        const parentProject = document.getElementsByClassName("parentProject")[0];
 
         gsap.from(".animate-left", {
             x: -500,
             opacity: 0
-        })
-        gsap.to(".animate-left", {
-            x: 0,
-            duration: 2,
-            opacity: 1
         })
 
         gsap.from(".animate-right", {
             x: 500,
             opacity: 0
         })
-        gsap.to(".animate-right", {
-            x: 0,
-            duration: 2,
-            opacity: 1
-        })
+
+        if (imgProject) {
+            imgProject.onload = () => {
+                parentProject.classList.add("animate-bg-change");
+                gsap.to(".animate-left", {
+                    x: 0,
+                    duration: 2,
+                    opacity: 1
+                })
+                gsap.to(".animate-right", {
+                    x: 0,
+                    duration: 2,
+                    opacity: 1
+                })
+            }
+
+            if (imgProject.complete) {
+                imgProject.onload();
+            }
+        }
+
     }, [])
 
 
@@ -48,11 +62,8 @@ function ProjectDetails(props) {
             <div>
                 <div className=' flex justify-center'><h1 className='text-4xl md:text-5xl  text-center bg-gradient-to-r from-purple-700 to-red-500 bg-clip-text text-transparent font-bold w-fit p-2'>Project Details</h1></div>
                 <div className=' grid grid-cols-1 lg:grid-cols-2 items-center justify-center p-5 md:px-14'>
-                    <a href={Project.LiveLink} target='_blank' className=' animate-left'><div className='w-[95%] lg:w-[80%] flex justify-center items-center p-2 md:p-3 bg-gradient-to-r from-purple-700 to-red-500 rounded-md transition-all duration-300 hover:scale-105'>
-                        <picture>
-                            <source srcSet={props.imgWeb} type='image/webp' />
-                            <img src={props.img} alt="project Image" loading='lazy' className='w-[98%] md:h-auto h-36  ' />
-                        </picture>
+                    <a href={Project.LiveLink} target='_blank' className=' animate-left'><div className='w-[95%] lg:w-[80%] flex justify-center items-center p-2 md:p-3 parentProject rounded-md transition-all duration-300 hover:scale-105'>
+                        <img src={props.img} alt="project Image" id='imgProject' className='  w-[98%] md:h-auto h-36  ' />
                     </div></a>
                     <div className=' text-xl text-gray-300 font-semibold space-y-4 py-10 animate-right'>
                         <div className=' flex space-x-3'>

@@ -17,7 +17,7 @@ function Navbar(props) {
     return (
         <div className=' fixed z-30'>
             <div className=' flex justify-between w-screen p-3 lg:px-16 md:px-7 items-center text-gray-300 bg-gray-950 '>
-                <h1 className=' text-4xl font-bold bg-gradient-to-r from-purple-700 to-red-400 bg-clip-text text-transparent p-1'>Anuj</h1>
+                <h1 className=' text-4xl font-bold bg-gradient-to-r from-purple-700 to-red-400 bg-clip-text text-transparent p-1 outline-none'>Anuj</h1>
                 <div className='hidden lg:flex space-x-8 font-semibold '>
                     <button className=' outline-none hover:scale-105 transition-all duration-300' onClick={() => scrollToSection(props.homeRef)} >Home</button>
                     <button className=' outline-none hover:scale-105 transition-all duration-300' onClick={() => scrollToSection(props.aboutRef)}>About me</button>
