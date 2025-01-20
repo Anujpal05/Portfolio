@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import img from '../assets/anujImg.jpg'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -101,7 +100,7 @@ function Profile(props) {
     return (
         <div className=' py-20 pt-36 text-zinc-300'>
             <div className='h-fit min-w-screen rounded-full flex justify-center items-center animate-profile'>
-                <img src={img} alt="Image" className='image border-2 border-white h-52 w-52 rounded-full' />
+                <img src={"https://res.cloudinary.com/dcfy1v0ab/image/upload/v1737372429/anujImg_qgbcga.jpg"} alt="Image" className='image border-2 border-white h-52 w-52 rounded-full' />
             </div>
             <div className=' flex  flex-col justify-center items-center'>
                 <h1 ref={textNameRef} className=' text-4xl md:text-5xl min-h-14 font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500  to-red-500 p-3' id=' text-name'></h1>
@@ -110,7 +109,7 @@ function Profile(props) {
             <div className=' flex justify-center p-6 space-x-10'>
                 <button className='border-2 border-zinc-300 bg-gradient-to-r from-purple-700 to-red-500 p-2 px-5 rounded-full font-semibold outline-none hover:from-purple-900 hover:to-red-600 transition-all duration-400 hover:scale-105' onClick={() => scrollToSection(props.contactRef)}><span className='hidden md:flex'>Contact with me</span><span className=' flex md:hidden'>Contact me</span></button>
                 {/* My Resume link  */}
-                <a href="https://drive.google.com/file/d/15Z0h1Z2eIKro9zkJ2ELSG7L-a6T6FEfP/view?usp=sharing" target='_blank'> <button className='border-2 border-zinc-300 hover:bg-gradient-to-r from-purple-700 to-red-500 p-2 px-5 rounded-full font-semibold outline-none transition-all duration-400 hover:scale-105'>My Resume</button></a>
+                <a href="https://drive.google.com/file/d/1NYcaNnXITDXnGM3i9ql_hRqCXzGRP0HX/view?usp=sharing" target='_blank'> <button className='border-2 border-zinc-300 hover:bg-gradient-to-r from-purple-700 to-red-500 p-2 px-5 rounded-full font-semibold outline-none transition-all duration-400 hover:scale-105'>My Resume</button></a>
             </div>
         </div >
     )

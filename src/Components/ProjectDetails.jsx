@@ -51,7 +51,7 @@ function ProjectDetails(props) {
 
 
     return (
-        <div className=' min-w-[100vw] h-fit w-fit '>
+        <div className=' min-w-[100vw] h-fit w-fit overflow-hidden '>
             <div className=' p-3 bg-gray-950 mb-5 flex justify-between md:px-20 '>
                 <Link to={"/"} className='text-4xl font-bold bg-gradient-to-r from-purple-700 to-red-500 bg-clip-text text-transparent p-1 md:px-10'>Anuj</Link>
                 <div className='flex md:space-x-10 space-x-2 justify-center items-center md:text-xl font-bold px-2 md:px-10 '>
@@ -63,7 +63,7 @@ function ProjectDetails(props) {
                 <div className=' flex justify-center'><h1 className='text-4xl md:text-5xl  text-center bg-gradient-to-r from-purple-700 to-red-500 bg-clip-text text-transparent font-bold w-fit p-2'>Project Details</h1></div>
                 <div className=' grid grid-cols-1 lg:grid-cols-2 items-center justify-center p-5 md:px-14'>
                     <a href={Project.LiveLink} target='_blank' className=' animate-left'><div className='w-[95%] lg:w-[80%] flex justify-center items-center p-2 md:p-3 parentProject rounded-md transition-all duration-300 hover:scale-105'>
-                        <img src={props.img} alt="project Image" id='imgProject' className='  w-[98%] md:h-auto h-36  ' />
+                        <img src={Project.imageUrl} alt="project Image" id='imgProject' className='  w-[98%] md:h-auto h-36  ' />
                     </div></a>
                     <div className=' text-xl text-gray-300 font-semibold space-y-4 py-10 animate-right'>
                         <div className=' flex space-x-3'>

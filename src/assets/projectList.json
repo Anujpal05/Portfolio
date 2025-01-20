@@ -2,6 +2,7 @@
   "project1": {
     "name": "Blog Pulse",
     "description": "BlogPulse is a dynamic platform where users can immerse themselves in the world of blogging. Users can seamlessly create, read, update, and delete their own blogs while exploring content from other bloggers. The application ensures a secure and smooth experience with JWT token-based authentication and a responsive design.",
+    "imageUrl": "https://res.cloudinary.com/dcfy1v0ab/image/upload/v1737372397/project1_ktxjdt.png",
     "features": [
       "Secure sign-in and sign-out using JWT tokens.",
       "Create, update, and delete personal blog posts.",
@@ -19,6 +20,7 @@
   "project2": {
     "name": "Book Heaven",
     "description": "Book Heaven is an interactive platform where users can explore book details and prices, and place orders after logging in. Users can favorite and cart books, view updated order statuses and book details, and enjoy mailing facilities such as OTP verification and order status updates. The admin panel allows admins to manage books and user orders efficiently.",
+    "imageUrl": "https://res.cloudinary.com/dcfy1v0ab/image/upload/v1737372403/project2_lckblp.jpg",
     "features": [
       "View book details and prices.",
       "Order books after logging in.",
@@ -39,6 +41,7 @@
   "project3": {
     "name": "NewsDaily",
     "description": "NewsDaily is a responsive web application where users can read daily news across various categories such as sports, business, health, and technology. Users can select their preferred news categories and enjoy a seamless reading experience with top-loading effects, infinite scrolling, and loaders. The application uses the News API key for local use only.",
+    "imageUrl": "https://res.cloudinary.com/dcfy1v0ab/image/upload/v1737372426/project3_pfn5xm.png",
     "features": [
       "Read daily updated news.",
       "Browse news by categories: sports, business, health, technology.",
@@ -54,5 +57,31 @@
     ],
     "GitHubLink": "https://github.com/Anujpal05/DailyNews.git",
     "LiveLink": "https://github.com/Anujpal05/DailyNews.git"
+  },
+
+  "project4": {
+    "name": "PixelMart",
+    "description": "PixelMart is a full-stack e-commerce platform built using the MERN stack (MongoDB, Express, React, Node.js). It offers secure authentication, Stripe payment integration, an admin panel, real-time order and payment updates, and a responsive design. The platform also includes dark/light mode, cart and wishlist management, and a product image carousel.",
+    "imageUrl": "https://res.cloudinary.com/dcfy1v0ab/image/upload/v1737372451/pixelmart.png",
+    "features": [
+      "JWT authentication with Firebase login",
+      "Stripe payment integration, including COD options",
+      "Admin panel for product and order management",
+      "Real-time order/payment status updates",
+      "Dark/light mode toggle",
+      "Cart & wishlist management",
+      "Search functionality and toast notifications",
+      "Product image carousel",
+      "Profile updates and password recovery",
+      "Salesman authorization"
+    ],
+    "technology": [
+      "MongoDB, Express, React, Node.js (MERN stack)",
+      "JWT authentication, Firebase",
+      "Stripe for payment processing",
+      "Responsive design"
+    ],
+    "GitHubLink": "https://github.com/Anujpal05/Digital-store",
+    "LiveLink": "https://pixelmart-digital-store.netlify.app"
   }
 }

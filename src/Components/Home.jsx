@@ -18,7 +18,7 @@ function Home() {
 
 
     return (
-        <div>
+        <div className=' overflow-hidden w-screen'>
             <Navbar homeRef={homeRef} aboutRef={aboutRef} myprojectRef={myprojectRef} contactRef={contactRef} educationRef={educationRef} />
             <div ref={homeRef}><Profile contactRef={contactRef} /> </div>
             <div ref={aboutRef}> <About /></div>

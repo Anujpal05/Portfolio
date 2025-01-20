@@ -25,7 +25,7 @@ function Navbar(props) {
                     <button className=' outline-none hover:scale-105 transition-all duration-300' onClick={() => scrollToSection(props.myprojectRef)}>Project</button>
                     <button className=' outline-none hover:scale-105' onClick={() => scrollToSection(props.contactRef)}>Contact me</button>
                 </div>
-                <a className=' outline-none' href="https://drive.google.com/file/d/15Z0h1Z2eIKro9zkJ2ELSG7L-a6T6FEfP/view?usp=sharing" target='_blank'><button className='hidden lg:flex bg-gradient-to-r from-purple-700 to-red-400 p-2 px-5 rounded-full font-semibold outline-none hover:from-purple-900 hover:to-red-600 hover:scale-105 transition-all duration-300'>My Resume</button></a>
+                <a className=' outline-none' href="https://drive.google.com/file/d/1NYcaNnXITDXnGM3i9ql_hRqCXzGRP0HX/view?usp=sharing" target='_blank'><button className='hidden lg:flex bg-gradient-to-r from-purple-700 to-red-400 p-2 px-5 rounded-full font-semibold outline-none hover:from-purple-900 hover:to-red-600 hover:scale-105 transition-all duration-300'>My Resume</button></a>
                 <button className='flex lg:hidden text-4xl outline-none ' onClick={() => setisOpen(true)}><IoReorderThree /></button>
 
                 {/* For responsiveness creating another navbar container for small device like mobile or tablets. */}
